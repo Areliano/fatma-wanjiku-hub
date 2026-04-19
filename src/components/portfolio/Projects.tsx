@@ -28,6 +28,17 @@ const projects: Project[] = [
     gradient: "from-primary to-primary-glow",
     image: clipsAndStylesImg,
   },
+  {
+    title: "Halima Hussein — Makeup Artist Portfolio",
+    description:
+      "A personal portfolio website built for a professional makeup artist, showcasing her featured work, service highlights, bio and contact details in a clean, elegant layout.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    category: "web",
+    link: "https://areliano.github.io/halima-hussein/",
+    github: "https://github.com/Areliano/halima-hussein.git",
+    gradient: "from-accent to-primary",
+    image: halimaHusseinImg,
+  },
 ];
 
 const tabs = [
