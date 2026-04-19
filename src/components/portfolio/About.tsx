@@ -1,13 +1,13 @@
 import { Sparkles } from "lucide-react";
 
 const paragraphs = [
-  "I'm a multidisciplinary tech professional who blends development, cybersecurity, and digital marketing to build solutions that are not only functional—but meaningful and impactful.",
-  "My journey into tech started with a strong foundation in Business Information Technology, but I quickly realized I wasn't interested in staying in just one lane. I've intentionally grown across multiple areas—full stack web development, backend systems, cybersecurity, and creative digital marketing—because today's digital world demands professionals who understand both how systems work and how people interact with them.",
+  "I'm a multidisciplinary tech professional who blends development, cybersecurity, and digital marketing to build solutions that are not only functional, but meaningful and impactful.",
+  "My journey into tech started with a strong foundation in Business Information Technology, but I quickly realized I wasn't interested in staying in just one lane. I've intentionally grown across multiple areas, including full stack web development, backend systems, cybersecurity, and creative digital marketing, because today's digital world demands professionals who understand both how systems work and how people interact with them.",
   "As a developer, I build scalable and efficient applications using React, Tailwind CSS, Python, FastAPI, Flask, and Django REST. I enjoy creating clean, user-focused interfaces while also engineering the logic and structure behind them.",
-  "At the same time, my experience in social media management and marketing has shaped how I think about users, content, and engagement. I don't just build platforms—I think about how they will be used, how they will grow, and how they will deliver value.",
+  "At the same time, my experience in social media management and marketing has shaped how I think about users, content, and engagement. I don't just build platforms. I think about how they will be used, how they will grow, and how they will deliver value.",
   "My growing interest in cybersecurity adds another layer to my work. With hands-on experience in vulnerability assessment, system security fundamentals, and threat awareness, I approach every project with a mindset of building secure and reliable systems from the ground up.",
   "Professionally, I've worked in environments ranging from IT support at the Postal Corporation of Kenya, to backend development at Isentry Technologies, to digital marketing and content strategy at Appleton Schools. Each experience has strengthened my ability to adapt, solve problems, and contribute meaningfully to both technical and business goals.",
-  "What sets me apart is my ability to connect the dots—between technology, users, security, and business needs.",
+  "What sets me apart is my ability to connect the dots between technology, users, security, and business needs.",
   "I'm continuously learning, evolving, and pushing my limits, with a clear goal: to build solutions that are efficient, secure, user-centered, and impactful.",
 ];
 

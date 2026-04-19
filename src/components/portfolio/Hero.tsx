@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            I build secure, scalable, and user-focused digital solutions—blending development, design, and strategy.
+            I build secure, scalable, and user-focused digital solutions.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-12">
