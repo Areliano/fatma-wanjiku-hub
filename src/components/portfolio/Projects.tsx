@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3, Maximize2 } from "lucide-react";
 import Lightbox from "./Lightbox";
 import { graphics } from "@/data/graphics";
+import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
 
 type Project = {
   title: string;
@@ -11,41 +12,20 @@ type Project = {
   link?: string;
   github?: string;
   gradient: string;
+  image?: string;
 };
 
 const projects: Project[] = [
   {
-    title: "School Management Platform",
-    description: "Full-stack web app for managing students, fees, and academic records with role-based access.",
-    tech: ["React", "FastAPI", "PostgreSQL", "Tailwind"],
+    title: "Clips & Styles",
+    description:
+      "A beauty-tech platform where clients can discover and book services from their favourite beauty professionals. Business owners can join the waitlist to be notified the moment the app launches.",
+    tech: ["React", "Tailwind CSS"],
     category: "web",
-    link: "#",
-    github: "#",
+    link: "https://clips-and-styles-website-ljo2n602y.vercel.app/",
+    github: "https://github.com/Areliano/Clips_and_Styles-website.git",
     gradient: "from-primary to-primary-glow",
-  },
-  {
-    title: "E-commerce Storefront",
-    description: "Modern responsive storefront with cart, checkout flow and admin dashboard.",
-    tech: ["React", "Django REST", "Stripe"],
-    category: "web",
-    link: "#",
-    gradient: "from-accent to-primary",
-  },
-  {
-    title: "Vulnerability Scanner CLI",
-    description: "Python CLI tool that performs basic web vulnerability checks and reports findings.",
-    tech: ["Python", "Requests", "Click"],
-    category: "github",
-    github: "#",
-    gradient: "from-secondary to-primary",
-  },
-  {
-    title: "REST API Boilerplate",
-    description: "Production-ready FastAPI starter with auth, migrations, and CI workflows.",
-    tech: ["FastAPI", "Alembic", "Docker"],
-    category: "github",
-    github: "#",
-    gradient: "from-accent to-secondary",
+    image: clipsAndStylesImg,
   },
 ];
 
@@ -185,10 +165,21 @@ const Projects = () => {
                 style={{ animationDelay: `${i * 0.05}s` }}
               >
                 <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
-                  <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
-                    {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
-                  </div>
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.title} preview`}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-smooth duration-500"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
+                      <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
+                        {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                      </div>
+                    </>
+                  )}
                   <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
                     {p.category === "github" ? "GitHub" : p.category}
                   </div>
@@ -205,12 +196,22 @@ const Projects = () => {
                   </div>
                   <div className="flex gap-2">
                     {p.link && (
-                      <a href={p.link} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth">
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth"
+                      >
                         <ExternalLink size={14} /> Live
                       </a>
                     )}
                     {p.github && (
-                      <a href={p.github} className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto">
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto"
+                      >
                         <Github size={14} /> Code
                       </a>
                     )}
