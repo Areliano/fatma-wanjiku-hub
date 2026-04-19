@@ -7,6 +7,7 @@ import googleCyber from "@/assets/certs/google-cybersecurity.png";
 import internetSociety from "@/assets/certs/internet-society.jpg";
 import csaPython from "@/assets/certs/csa-python.jpg";
 import cybershujaa from "@/assets/certs/cybershujaa.jpg";
+import dsaGraphics from "@/assets/certs/dsa-graphics-design.jpg";
 
 const certs = [
   { title: "Google IT Support Certificate", issuer: "Coursera", year: "2022", image: googleIt },
@@ -17,6 +18,7 @@ const certs = [
   { title: "Fundamentals of Designing and Deploying Networks", issuer: "Internet Society Foundation", year: "2025", image: internetSociety },
   { title: "Python for Software Engineering", issuer: "Computer Science Academy Africa", year: "2025", image: csaPython },
   { title: "Security Analyst Training", issuer: "CyberShujaa", year: "2025", image: cybershujaa },
+  { title: "Graphics Design", issuer: "Digital Skillup Africa", year: "2025", image: dsaGraphics },
 ];
 
 const Certifications = () => {
