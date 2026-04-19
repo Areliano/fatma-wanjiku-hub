@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3 } from "lucide-react";
+import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3, Maximize2 } from "lucide-react";
+import Lightbox from "./Lightbox";
+import { graphics } from "@/data/graphics";
 
 type Project = {
   title: string;
   description: string;
   tech: string[];
-  category: "web" | "graphics" | "github";
+  category: "web" | "github";
   link?: string;
   github?: string;
   gradient: string;
@@ -28,20 +30,6 @@ const projects: Project[] = [
     category: "web",
     link: "#",
     gradient: "from-accent to-primary",
-  },
-  {
-    title: "Brand Identity — Appleton Schools",
-    description: "Logo refresh, social templates, and a complete visual content system.",
-    tech: ["Figma", "Illustrator", "Photoshop"],
-    category: "graphics",
-    gradient: "from-primary-glow to-accent",
-  },
-  {
-    title: "Marketing Poster Series",
-    description: "Editorial posters for campaigns, events and product launches.",
-    tech: ["Illustrator", "Photoshop"],
-    category: "graphics",
-    gradient: "from-primary to-accent",
   },
   {
     title: "Vulnerability Scanner CLI",
@@ -86,7 +74,19 @@ const caseStudy = {
 
 const Projects = () => {
   const [active, setActive] = useState<(typeof tabs)[number]["id"]>("all");
-  const filtered = active === "all" ? projects : projects.filter((p) => p.category === active);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const showGraphics = active === "all" || active === "graphics";
+  const showProjects = active === "all" || active === "web" || active === "github";
+  const filteredProjects = projects.filter(
+    (p) => active === "all" || p.category === active,
+  );
+
+  const lightboxImages = graphics.map((g) => ({
+    src: g.image,
+    title: g.title,
+    description: `${g.client} · ${g.category}`,
+  }));
 
   return (
     <section id="projects" className="section-padding bg-gradient-soft">
@@ -99,7 +99,7 @@ const Projects = () => {
             Selected <span className="gradient-text">work</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Web apps, brand identities, and open-source tooling — placeholders shown until uploads are provided.
+            Web apps, brand identities, and open-source tooling — click any design to view full-size.
           </p>
         </div>
 
@@ -120,49 +120,106 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {filtered.map((p, i) => (
-            <article
-              key={i}
-              className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
-              style={{ animationDelay: `${i * 0.05}s` }}
-            >
-              <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
-                <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
-                  {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
-                </div>
-                <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
-                  {p.category === "github" ? "GitHub" : p.category}
-                </div>
+        {/* Graphics Gallery */}
+        {showGraphics && graphics.length > 0 && (
+          <div className="mb-16">
+            {active === "all" && (
+              <div className="flex items-end justify-between mb-6">
+                <h3 className="text-2xl font-black">
+                  Graphic <span className="gradient-text">design</span>
+                </h3>
+                <button
+                  onClick={() => setActive("graphics")}
+                  className="text-sm font-semibold text-primary hover:underline"
+                >
+                  View all →
+                </button>
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-smooth">{p.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.description}</p>
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {p.tech.map((t) => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-muted text-primary font-semibold">
-                      {t}
-                    </span>
-                  ))}
+            )}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+              {graphics.map((g, i) => (
+                <button
+                  key={g.title}
+                  onClick={() => setLightboxIndex(i)}
+                  className="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in text-left"
+                  style={{ animationDelay: `${i * 0.04}s` }}
+                  aria-label={`Open ${g.title}`}
+                >
+                  <img
+                    src={g.image}
+                    alt={`${g.title} — designed for ${g.client}`}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/30 to-transparent opacity-60 group-hover:opacity-90 transition-smooth" />
+
+                  {/* Category chip */}
+                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-card/95 backdrop-blur-sm text-primary">
+                    {g.category}
+                  </span>
+
+                  {/* Maximize icon */}
+                  <span className="absolute top-3 right-3 w-8 h-8 rounded-full bg-card/95 backdrop-blur-sm grid place-items-center text-primary opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-smooth">
+                    <Maximize2 size={14} />
+                  </span>
+
+                  {/* Caption */}
+                  <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground translate-y-2 group-hover:translate-y-0 transition-smooth">
+                    <h4 className="font-bold text-sm leading-tight mb-0.5 line-clamp-2">{g.title}</h4>
+                    <p className="text-[11px] opacity-80 font-medium">{g.client}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Projects Grid */}
+        {showProjects && filteredProjects.length > 0 && (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            {filteredProjects.map((p, i) => (
+              <article
+                key={p.title}
+                className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
+                style={{ animationDelay: `${i * 0.05}s` }}
+              >
+                <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
+                  <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
+                    {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                  </div>
+                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
+                    {p.category === "github" ? "GitHub" : p.category}
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  {p.link && (
-                    <a href={p.link} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth">
-                      <ExternalLink size={14} /> Live
-                    </a>
-                  )}
-                  {p.github && (
-                    <a href={p.github} className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto">
-                      <Github size={14} /> Code
-                    </a>
-                  )}
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-smooth">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.description}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {p.tech.map((t) => (
+                      <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-muted text-primary font-semibold">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-2">
+                    {p.link && (
+                      <a href={p.link} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth">
+                        <ExternalLink size={14} /> Live
+                      </a>
+                    )}
+                    {p.github && (
+                      <a href={p.github} className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto">
+                        <Github size={14} /> Code
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        )}
 
         {/* Case Study */}
         <div className="rounded-[2rem] bg-card shadow-elegant border border-border/50 overflow-hidden">
@@ -203,13 +260,24 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-muted-foreground mt-4 italic">
-                Sample post links / screenshots will appear here once you upload them.
-              </p>
             </div>
           </div>
         </div>
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={lightboxImages}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onPrev={() =>
+            setLightboxIndex((i) => (i === null ? null : (i - 1 + lightboxImages.length) % lightboxImages.length))
+          }
+          onNext={() =>
+            setLightboxIndex((i) => (i === null ? null : (i + 1) % lightboxImages.length))
+          }
+        />
+      )}
     </section>
   );
 };
