@@ -5,6 +5,7 @@ import { graphics } from "@/data/graphics";
 import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
 import halimaHusseinImg from "@/assets/projects/halima-hussein.png";
 import weatherAppImg from "@/assets/projects/weather-app.png";
+import eventManagementImg from "@/assets/projects/event-management.png";
 
 type Project = {
   title: string;
