@@ -52,6 +52,16 @@ const projects: Project[] = [
     gradient: "from-primary-glow to-accent",
     image: weatherAppImg,
   },
+  {
+    title: "Event Management System API",
+    description:
+      "A backend API for managing events end-to-end — users can register and log in, organizers can create, update and delete events, and attendees can RSVP with approval workflows, attendee limits, pagination, and filtering by date, location or keyword. Secured with JWT authentication and documented via Swagger UI.",
+    tech: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "Swagger"],
+    category: "github",
+    github: "https://github.com/Areliano/event_management.git",
+    gradient: "from-accent to-primary-glow",
+    image: eventManagementImg,
+  },
 ];
 
 const tabs = [
