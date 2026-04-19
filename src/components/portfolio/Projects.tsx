@@ -4,6 +4,7 @@ import Lightbox from "./Lightbox";
 import { graphics } from "@/data/graphics";
 import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
 import halimaHusseinImg from "@/assets/projects/halima-hussein.png";
+import weatherAppImg from "@/assets/projects/weather-app.png";
 
 type Project = {
   title: string;
@@ -38,6 +39,17 @@ const projects: Project[] = [
     github: "https://github.com/Areliano/halima-hussein.git",
     gradient: "from-accent to-primary",
     image: halimaHusseinImg,
+  },
+  {
+    title: "Simple Weather App",
+    description:
+      "A lightweight weather application that lets users search any city and instantly view its current temperature and conditions, powered by a live weather API.",
+    tech: ["HTML", "CSS", "JavaScript", "Weather API"],
+    category: "web",
+    link: "https://areliano.github.io/simple-weather-app/",
+    github: "https://github.com/Areliano/simple-weather-app.git",
+    gradient: "from-primary-glow to-accent",
+    image: weatherAppImg,
   },
 ];
 
