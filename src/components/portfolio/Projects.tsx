@@ -94,7 +94,7 @@ const projects: Project[] = [
       "A full-stack art gallery management system for Usanii Mashariki (UM). Visitors can browse artworks and artists, view exhibitions, book exhibition slots, and contact gallery admins via email. Includes a shopping cart, order summary and admin reports for managing the gallery end-to-end.",
     tech: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap"],
     category: "github",
-    github: "https://github.com/Areliano",
+    github: "https://github.com/Areliano/usanii_art_gallery.git",
     gradient: "from-primary to-accent",
     image: usaniiMasharikiImg,
   },
