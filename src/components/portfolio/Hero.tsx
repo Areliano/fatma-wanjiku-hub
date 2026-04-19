@@ -1,5 +1,5 @@
 import { ArrowRight, Download, Mail, Code2, Shield, Megaphone, Palette } from "lucide-react";
-import profileImg from "@/assets/profile-placeholder.jpg";
+import profileImg from "@/assets/profile-fatma.jpg";
 
 const highlights = [
   { icon: Code2, label: "Full Stack Development" },

@@ -16,16 +16,22 @@ const CV = () => {
               A detailed summary of my education, experience, technical stack, certifications, and professional achievements.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant hover:scale-105 transition-bounce">
+              <a
+                href="/Fatma_Hussein_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant hover:scale-105 transition-bounce"
+              >
                 <Eye size={18} /> View CV
-              </button>
-              <button className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-smooth">
+              </a>
+              <a
+                href="/Fatma_Hussein_CV.pdf"
+                download="Fatma_Hussein_CV.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-smooth"
+              >
                 <Download size={18} /> Download PDF
-              </button>
+              </a>
             </div>
-            <p className="text-xs text-muted-foreground mt-6 italic">
-              Upload your CV PDF and I'll wire these buttons to view and download it.
-            </p>
           </div>
 
           <div className="relative">
