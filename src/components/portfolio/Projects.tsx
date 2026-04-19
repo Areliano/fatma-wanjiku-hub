@@ -3,6 +3,7 @@ import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3, Maximiz
 import Lightbox from "./Lightbox";
 import { graphics } from "@/data/graphics";
 import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
+import halimaHusseinImg from "@/assets/projects/halima-hussein.png";
 
 type Project = {
   title: string;
