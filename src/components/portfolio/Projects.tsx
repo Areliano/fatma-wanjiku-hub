@@ -7,6 +7,7 @@ import halimaHusseinImg from "@/assets/projects/halima-hussein.png";
 import weatherAppImg from "@/assets/projects/weather-app.png";
 import eventManagementImg from "@/assets/projects/event-management.png";
 import safetalkKenyaImg from "@/assets/projects/safetalk-kenya.png";
+import ujamaaFlowImg from "@/assets/projects/ujamaaflow.png";
 
 type Project = {
   title: string;
@@ -63,6 +64,17 @@ const projects: Project[] = [
     github: "https://github.com/Areliano/safetalk-kenya.git",
     gradient: "from-primary to-accent",
     image: safetalkKenyaImg,
+  },
+  {
+    title: "UjamaaFlow",
+    description:
+      "A community-driven platform that connects people in need of essentials like food, clothes and shoes with those ready to help — built to mobilise support quickly during emergencies and crises.",
+    tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
+    category: "web",
+    link: "https://ujamaaflow.lovable.app",
+    github: "https://github.com/Areliano/ujamaaflow-0f528308.git",
+    gradient: "from-accent to-primary-glow",
+    image: ujamaaFlowImg,
   },
   {
     title: "Event Management System API",
