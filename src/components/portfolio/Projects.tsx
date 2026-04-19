@@ -9,6 +9,7 @@ import eventManagementImg from "@/assets/projects/event-management.png";
 import safetalkKenyaImg from "@/assets/projects/safetalk-kenya.png";
 import ujamaaFlowImg from "@/assets/projects/ujamaaflow.png";
 import appletonSchoolImg from "@/assets/projects/appleton-school.png";
+import usaniiMasharikiImg from "@/assets/projects/usanii-mashariki.png";
 
 type Project = {
   title: string;
@@ -86,6 +87,16 @@ const projects: Project[] = [
     link: "https://www.appletonschool.ac.ke/",
     gradient: "from-primary-glow to-primary",
     image: appletonSchoolImg,
+  },
+  {
+    title: "Usanii Mashariki Art Gallery",
+    description:
+      "A full-stack art gallery management system for Usanii Mashariki (UM). Visitors can browse artworks and artists, view exhibitions, book exhibition slots, and contact gallery admins via email. Includes a shopping cart, order summary and admin reports for managing the gallery end-to-end.",
+    tech: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    category: "github",
+    github: "https://github.com/Areliano",
+    gradient: "from-primary to-accent",
+    image: usaniiMasharikiImg,
   },
   {
     title: "Event Management System API",
