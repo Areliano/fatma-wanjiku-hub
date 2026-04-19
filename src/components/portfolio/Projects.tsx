@@ -10,6 +10,7 @@ import safetalkKenyaImg from "@/assets/projects/safetalk-kenya.png";
 import ujamaaFlowImg from "@/assets/projects/ujamaaflow.png";
 import appletonSchoolImg from "@/assets/projects/appleton-school.png";
 import usaniiMasharikiImg from "@/assets/projects/usanii-mashariki.png";
+import barakaRestaurantImg from "@/assets/projects/baraka-restaurant.png";
 
 type Project = {
   title: string;
@@ -97,6 +98,16 @@ const projects: Project[] = [
     github: "https://github.com/Areliano/usanii_art_gallery.git",
     gradient: "from-primary to-accent",
     image: usaniiMasharikiImg,
+  },
+  {
+    title: "Baraka Rescue Restaurant",
+    description:
+      "A Django-based restaurant management system for Baraka Rescue Restaurant. Helps owners and managers handle menus, customer records, reservations, orders and reports — with a customer-facing site for browsing specialties, placing orders and booking tables.",
+    tech: ["Python", "Django", "HTML", "CSS", "JavaScript"],
+    category: "github",
+    github: "https://github.com/Areliano/restaurant_project.git",
+    gradient: "from-accent to-primary",
+    image: barakaRestaurantImg,
   },
   {
     title: "Event Management System API",
