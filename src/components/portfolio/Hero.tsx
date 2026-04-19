@@ -26,7 +26,7 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text">Fatma Wanjiku Hussein</span>
           </h1>
 
-          <p className="text-base md:text-lg text-foreground/70 mb-3 font-semibold">
+          <p className="text-base md:text-lg lg:text-xl text-foreground/90 mb-3 font-bold">
             Full Stack Developer · Cybersecurity Analyst · Digital Marketer · Designer
           </p>
 
@@ -75,7 +75,7 @@ const Hero = () => {
           <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-elegant border-4 border-card animate-float">
             <img
               src={profileImg}
-              alt="Fatma Wanjiku Hussein — Full Stack Developer & Cybersecurity Analyst"
+              alt="Fatma Wanjiku Hussein | Full Stack Developer & Cybersecurity Analyst"
               width={1024}
               height={1280}
               className="w-full h-full object-cover"
