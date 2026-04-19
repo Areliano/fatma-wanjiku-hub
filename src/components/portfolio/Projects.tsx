@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3, Maximize2 } from "lucide-react";
 import Lightbox from "./Lightbox";
 import { graphics } from "@/data/graphics";
+import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
 
 type Project = {
   title: string;
@@ -11,41 +12,20 @@ type Project = {
   link?: string;
   github?: string;
   gradient: string;
+  image?: string;
 };
 
 const projects: Project[] = [
   {
-    title: "School Management Platform",
-    description: "Full-stack web app for managing students, fees, and academic records with role-based access.",
-    tech: ["React", "FastAPI", "PostgreSQL", "Tailwind"],
+    title: "Clips & Styles",
+    description:
+      "A beauty-tech platform where clients can discover and book services from their favourite beauty professionals. Business owners can join the waitlist to be notified the moment the app launches.",
+    tech: ["React", "Tailwind CSS"],
     category: "web",
-    link: "#",
-    github: "#",
+    link: "https://clips-and-styles-website-ljo2n602y.vercel.app/",
+    github: "https://github.com/Areliano/Clips_and_Styles-website.git",
     gradient: "from-primary to-primary-glow",
-  },
-  {
-    title: "E-commerce Storefront",
-    description: "Modern responsive storefront with cart, checkout flow and admin dashboard.",
-    tech: ["React", "Django REST", "Stripe"],
-    category: "web",
-    link: "#",
-    gradient: "from-accent to-primary",
-  },
-  {
-    title: "Vulnerability Scanner CLI",
-    description: "Python CLI tool that performs basic web vulnerability checks and reports findings.",
-    tech: ["Python", "Requests", "Click"],
-    category: "github",
-    github: "#",
-    gradient: "from-secondary to-primary",
-  },
-  {
-    title: "REST API Boilerplate",
-    description: "Production-ready FastAPI starter with auth, migrations, and CI workflows.",
-    tech: ["FastAPI", "Alembic", "Docker"],
-    category: "github",
-    github: "#",
-    gradient: "from-accent to-secondary",
+    image: clipsAndStylesImg,
   },
 ];
 
