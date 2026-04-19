@@ -39,7 +39,7 @@ const Contact = () => {
             Let's <span className="gradient-text">work together</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Open to roles, freelance projects, and collaborations — locally and internationally.
+            Open to roles, freelance projects, and collaborations both locally and internationally.
           </p>
         </div>
 

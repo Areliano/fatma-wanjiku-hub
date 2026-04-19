@@ -36,7 +36,7 @@ const projects: Project[] = [
     image: clipsAndStylesImg,
   },
   {
-    title: "Halima Hussein — Makeup Artist Portfolio",
+    title: "Halima Hussein | Makeup Artist Portfolio",
     description:
       "A personal portfolio website built for a professional makeup artist, showcasing her featured work, service highlights, bio and contact details in a clean, elegant layout.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -60,7 +60,7 @@ const projects: Project[] = [
   {
     title: "SafeTalk Kenya",
     description:
-      "A multilingual, anonymous web platform that gives Kenyan high school students a safe way to report issues like bullying, grooming and harassment, and chat with trained counselors — no login or phone number required. Students receive a secure token to resume their conversations whenever they regain access to a device.",
+      "A multilingual, anonymous web platform that gives Kenyan high school students a safe way to report issues like bullying, grooming and harassment, and chat with trained counselors. No login or phone number required. Students receive a secure token to resume their conversations whenever they regain access to a device.",
     tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
     category: "web",
     link: "https://safetalk-kenya.lovable.app/",
@@ -71,7 +71,7 @@ const projects: Project[] = [
   {
     title: "UjamaaFlow",
     description:
-      "A community-driven platform that connects people in need of essentials like food, clothes and shoes with those ready to help — built to mobilise support quickly during emergencies and crises.",
+      "A community-driven platform that connects people in need of essentials like food, clothes and shoes with those ready to help, built to mobilise support quickly during emergencies and crises.",
     tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
     category: "web",
     link: "https://ujamaaflow.lovable.app",
@@ -129,7 +129,7 @@ const tabs = [
 ] as const;
 
 const caseStudy = {
-  title: "Appleton Schools — Social Media Growth",
+  title: "Appleton Schools | Social Media Growth",
   platforms: ["Facebook", "Instagram", "TikTok"],
   role: "Lead Social Media Manager & Content Strategist",
   strategy: [
@@ -171,7 +171,7 @@ const Projects = () => {
             Selected <span className="gradient-text">work</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Web apps, brand identities, and open-source tooling — click any design to view full-size.
+            Web apps, brand identities, and open-source tooling. Click any design to view full-size.
           </p>
         </div>
 
@@ -301,7 +301,7 @@ const Projects = () => {
                 >
                   <img
                     src={g.image}
-                    alt={`${g.title} — designed for ${g.client}`}
+                    alt={`${g.title} | designed for ${g.client}`}
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
                   />

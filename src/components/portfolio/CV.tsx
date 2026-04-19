@@ -3,7 +3,7 @@ import { FileText, Download, Eye, Briefcase, GraduationCap, Wrench, Award, Langu
 const experience = [
   {
     role: "Social Media & Marketing Specialist",
-    company: "Appleton Schools — Nairobi",
+    company: "Appleton Schools, Nairobi",
     period: "May 2025 – Present",
     bullets: [
       "Create and publish content across Instagram, Facebook, TikTok, Google Business, X, LinkedIn and YouTube.",
@@ -15,7 +15,7 @@ const experience = [
   },
   {
     role: "Back End Developer Intern",
-    company: "Isentry Technologies — Remote",
+    company: "Isentry Technologies (Remote)",
     period: "Jan 2025 – Mar 2025",
     bullets: [
       "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
@@ -27,7 +27,7 @@ const experience = [
   },
   {
     role: "ICT Attachée",
-    company: "Postal Corporation of Kenya (PCK) — Nairobi",
+    company: "Postal Corporation of Kenya (PCK), Nairobi",
     period: "May 2024 – Jul 2024",
     bullets: [
       "Provided frontline IT support, resolving hardware, software and connectivity issues to minimize downtime.",
@@ -205,10 +205,10 @@ const CV = () => {
               </h4>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 rounded-full bg-muted text-foreground font-semibold text-sm">
-                  English — <span className="text-primary">C2 Proficient</span>
+                  English: <span className="text-primary">C2 Proficient</span>
                 </span>
                 <span className="px-4 py-2 rounded-full bg-muted text-foreground font-semibold text-sm">
-                  Swahili — <span className="text-primary">C2 Proficient</span>
+                  Swahili: <span className="text-primary">C2 Proficient</span>
                 </span>
               </div>
             </div>

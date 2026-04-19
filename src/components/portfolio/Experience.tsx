@@ -10,7 +10,7 @@ type Item = {
 const experiences: Item[] = [
   {
     role: "Social Media & Marketing Specialist",
-    org: "Appleton Schools — Nairobi",
+    org: "Appleton Schools, Nairobi",
     duration: "May 2025 – Present",
     achievements: [
       "Create and publish content across Instagram, Facebook, TikTok, Google Business, X, LinkedIn and YouTube.",
@@ -24,7 +24,7 @@ const experiences: Item[] = [
   },
   {
     role: "Back End Developer Intern",
-    org: "Isentry Technologies — Remote",
+    org: "Isentry Technologies (Remote)",
     duration: "January 2025 – March 2025",
     achievements: [
       "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
@@ -37,7 +37,7 @@ const experiences: Item[] = [
   },
   {
     role: "ICT Attachée",
-    org: "Postal Corporation of Kenya (PCK) — Nairobi",
+    org: "Postal Corporation of Kenya (PCK), Nairobi",
     duration: "May 2024 – July 2024",
     achievements: [
       "Provided frontline IT support, resolving hardware, software and connectivity issues to minimize downtime.",
