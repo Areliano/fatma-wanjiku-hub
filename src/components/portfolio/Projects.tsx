@@ -196,16 +196,10 @@ const Projects = () => {
         {showGraphics && graphics.length > 0 && (
           <div className="mb-16">
             {active === "all" && (
-              <div className="flex items-end justify-between mb-6">
+              <div className="mb-6">
                 <h3 className="text-2xl font-black">
                   Graphic <span className="gradient-text">design</span>
                 </h3>
-                <button
-                  onClick={() => setActive("graphics")}
-                  className="text-sm font-semibold text-primary hover:underline"
-                >
-                  View all →
-                </button>
               </div>
             )}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
@@ -244,6 +238,73 @@ const Projects = () => {
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Projects Grid */}
+        {showProjects && filteredProjects.length > 0 && (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            {filteredProjects.map((p, i) => (
+              <article
+                key={p.title}
+                className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
+                style={{ animationDelay: `${i * 0.05}s` }}
+              >
+                <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.title} preview`}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-smooth duration-500"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
+                      <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
+                        {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                      </div>
+                    </>
+                  )}
+                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
+                    {p.category === "github" ? "GitHub" : p.category}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-smooth">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.description}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {p.tech.map((t) => (
+                      <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-muted text-primary font-semibold">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-2">
+                    {p.link && (
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth"
+                      >
+                        <ExternalLink size={14} /> Live
+                      </a>
+                    )}
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto"
+                      >
+                        <Github size={14} /> Code
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         )}
 
