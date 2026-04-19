@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, Linkedin, Github, Twitter, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Linkedin, Github, Instagram } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 
@@ -84,18 +84,23 @@ const Contact = () => {
               <div className="mt-10 pt-8 border-t border-primary-foreground/20">
                 <p className="text-xs opacity-70 font-semibold mb-3">FOLLOW ME</p>
                 <div className="flex gap-3">
-                  {[Linkedin, Github, Twitter, Instagram].map((Icon, i) => (
+                  {[
+                    { Icon: Linkedin, href: "https://www.linkedin.com/in/fatma-h-7a584421a", label: "LinkedIn" },
+                    { Icon: Github, href: "https://github.com/Areliano", label: "GitHub" },
+                    { Icon: Instagram, href: "https://www.instagram.com/_.african_wanjiku/", label: "Instagram" },
+                  ].map(({ Icon, href, label }) => (
                     <a
-                      key={i}
-                      href="#"
-                      aria-label="Social"
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
                       className="w-11 h-11 rounded-xl bg-primary-foreground/15 grid place-items-center hover:bg-primary-foreground/30 hover:scale-110 transition-bounce"
                     >
                       <Icon size={18} />
                     </a>
                   ))}
                 </div>
-                <p className="text-xs opacity-60 mt-3 italic">Share your social links to wire these up.</p>
               </div>
             </div>
           </div>

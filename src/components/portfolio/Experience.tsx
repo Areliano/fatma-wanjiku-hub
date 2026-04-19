@@ -9,33 +9,43 @@ type Item = {
 
 const experiences: Item[] = [
   {
-    role: "Digital Marketing & Content Strategist",
-    org: "Appleton Schools",
-    duration: "Recent",
+    role: "Social Media & Marketing Specialist",
+    org: "Appleton Schools — Nairobi",
+    duration: "May 2025 – Present",
     achievements: [
-      "Developed and executed a content strategy that grew social media engagement and reach.",
-      "Managed multi-platform campaigns across Facebook, Instagram, and TikTok.",
-      "Produced graphics and short-form video content aligned with the school's brand voice.",
+      "Create and publish content across Instagram, Facebook, TikTok, Google Business, X, LinkedIn and YouTube.",
+      "Design, develop and maintain the school's new website; write and publish blog articles.",
+      "Edit and produce visual content (images & videos) using Canva, CapCut and Adobe Photoshop.",
+      "Generate monthly reports on organic content performance and audience insights.",
+      "Plan, organize and execute marketing events, open days and school activations.",
+      "Support paid advertising campaigns and contribute to weekly strategy brainstorms.",
+      "Track and maintain up-to-date student media consent records.",
     ],
   },
   {
-    role: "Backend Developer",
-    org: "Isentry Technologies",
-    duration: "Previous",
+    role: "Back End Developer Intern",
+    org: "Isentry Technologies — Remote",
+    duration: "January 2025 – March 2025",
     achievements: [
-      "Built and maintained backend services using Python (Flask / FastAPI / Django REST).",
-      "Designed RESTful APIs and database schemas for client-facing applications.",
-      "Collaborated with frontend and product teams to deliver scalable features.",
+      "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
+      "Built and maintained RESTful APIs using FastAPI and SQLAlchemy.",
+      "Implemented user authentication and role-based access control.",
+      "Designed and optimized relational database models for users, projects, tasks, and skills.",
+      "Supported integrations with external tools such as GitHub and Trello.",
+      "Collaborated with cross-functional teams on debugging and system testing.",
     ],
   },
   {
-    role: "IT Support",
-    org: "Postal Corporation of Kenya",
-    duration: "Earlier",
+    role: "ICT Attachée",
+    org: "Postal Corporation of Kenya (PCK) — Nairobi",
+    duration: "May 2024 – July 2024",
     achievements: [
-      "Provided technical support and troubleshooting across multiple departments.",
-      "Maintained hardware, software, and network infrastructure.",
-      "Built early hands-on experience in systems administration and user support.",
+      "Provided frontline IT support, resolving hardware, software and connectivity issues to minimize downtime.",
+      "Troubleshot system and network-related problems across departments.",
+      "Installed, configured and maintained computers, printers and other ICT equipment.",
+      "Managed IT asset inventory and digital records, ensuring accurate documentation.",
+      "Performed routine system maintenance and supported telephony infrastructure.",
+      "Assisted staff in adopting digital tools, improving document handling and communication.",
     ],
   },
 ];
@@ -102,9 +112,6 @@ const Experience = () => {
           </div>
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-12 italic">
-          Upload your CV and I'll populate exact dates and additional roles.
-        </p>
       </div>
     </section>
   );
