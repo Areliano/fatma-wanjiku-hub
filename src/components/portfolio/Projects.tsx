@@ -6,6 +6,7 @@ import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
 import halimaHusseinImg from "@/assets/projects/halima-hussein.png";
 import weatherAppImg from "@/assets/projects/weather-app.png";
 import eventManagementImg from "@/assets/projects/event-management.png";
+import safetalkKenyaImg from "@/assets/projects/safetalk-kenya.png";
 
 type Project = {
   title: string;
@@ -51,6 +52,17 @@ const projects: Project[] = [
     github: "https://github.com/Areliano/simple-weather-app.git",
     gradient: "from-primary-glow to-accent",
     image: weatherAppImg,
+  },
+  {
+    title: "SafeTalk Kenya",
+    description:
+      "A multilingual, anonymous web platform that gives Kenyan high school students a safe way to report issues like bullying, grooming and harassment, and chat with trained counselors — no login or phone number required. Students receive a secure token to resume their conversations whenever they regain access to a device.",
+    tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
+    category: "web",
+    link: "https://safetalk-kenya.lovable.app/",
+    github: "https://github.com/Areliano/safetalk-kenya.git",
+    gradient: "from-primary to-accent",
+    image: safetalkKenyaImg,
   },
   {
     title: "Event Management System API",
