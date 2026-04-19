@@ -165,10 +165,21 @@ const Projects = () => {
                 style={{ animationDelay: `${i * 0.05}s` }}
               >
                 <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
-                  <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
-                    {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
-                  </div>
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.title} preview`}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-smooth duration-500"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
+                      <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
+                        {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                      </div>
+                    </>
+                  )}
                   <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
                     {p.category === "github" ? "GitHub" : p.category}
                   </div>
@@ -185,12 +196,22 @@ const Projects = () => {
                   </div>
                   <div className="flex gap-2">
                     {p.link && (
-                      <a href={p.link} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth">
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth"
+                      >
                         <ExternalLink size={14} /> Live
                       </a>
                     )}
                     {p.github && (
-                      <a href={p.github} className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto">
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto"
+                      >
                         <Github size={14} /> Code
                       </a>
                     )}
