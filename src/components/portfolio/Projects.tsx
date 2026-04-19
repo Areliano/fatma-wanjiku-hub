@@ -192,15 +192,103 @@ const Projects = () => {
           ))}
         </div>
 
+        {/* Projects Grid (Web + GitHub, ordered) */}
+        {showProjects && filteredProjects.length > 0 && (
+          <div className="mb-16 space-y-12">
+            {(["web", "github"] as const).map((cat) => {
+              const items = filteredProjects.filter((p) => p.category === cat);
+              if (items.length === 0) return null;
+              const heading =
+                cat === "web" ? (
+                  <>
+                    Web <span className="gradient-text">development</span>
+                  </>
+                ) : (
+                  <>
+                    GitHub <span className="gradient-text">projects</span>
+                  </>
+                );
+              return (
+                <div key={cat}>
+                  {active === "all" && (
+                    <h3 className="text-2xl font-black mb-6">{heading}</h3>
+                  )}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((p, i) => (
+                      <article
+                        key={p.title}
+                        className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
+                        style={{ animationDelay: `${i * 0.05}s` }}
+                      >
+                        <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
+                          {p.image ? (
+                            <img
+                              src={p.image}
+                              alt={`${p.title} preview`}
+                              loading="lazy"
+                              className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-smooth duration-500"
+                            />
+                          ) : (
+                            <>
+                              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
+                              <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
+                                {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                              </div>
+                            </>
+                          )}
+                          <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
+                            {p.category === "github" ? "GitHub" : p.category}
+                          </div>
+                        </div>
+                        <div className="p-6">
+                          <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-smooth">{p.title}</h3>
+                          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.description}</p>
+                          <div className="flex flex-wrap gap-1.5 mb-4">
+                            {p.tech.map((t) => (
+                              <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-muted text-primary font-semibold">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                          <div className="flex gap-2">
+                            {p.link && (
+                              <a
+                                href={p.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth"
+                              >
+                                <ExternalLink size={14} /> Live
+                              </a>
+                            )}
+                            {p.github && (
+                              <a
+                                href={p.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto"
+                              >
+                                <Github size={14} /> Code
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         {/* Graphics Gallery */}
         {showGraphics && graphics.length > 0 && (
-          <div className="mb-16">
+          <div className="mb-20">
             {active === "all" && (
-              <div className="mb-6">
-                <h3 className="text-2xl font-black">
-                  Graphic <span className="gradient-text">design</span>
-                </h3>
-              </div>
+              <h3 className="text-2xl font-black mb-6">
+                Graphic <span className="gradient-text">design</span>
+              </h3>
             )}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
               {graphics.map((g, i) => (
@@ -217,20 +305,13 @@ const Projects = () => {
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
                   />
-                  {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/30 to-transparent opacity-60 group-hover:opacity-90 transition-smooth" />
-
-                  {/* Category chip */}
                   <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-card/95 backdrop-blur-sm text-primary">
                     {g.category}
                   </span>
-
-                  {/* Maximize icon */}
                   <span className="absolute top-3 right-3 w-8 h-8 rounded-full bg-card/95 backdrop-blur-sm grid place-items-center text-primary opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-smooth">
                     <Maximize2 size={14} />
                   </span>
-
-                  {/* Caption */}
                   <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground translate-y-2 group-hover:translate-y-0 transition-smooth">
                     <h4 className="font-bold text-sm leading-tight mb-0.5 line-clamp-2">{g.title}</h4>
                     <p className="text-[11px] opacity-80 font-medium">{g.client}</p>
@@ -238,140 +319,6 @@ const Projects = () => {
                 </button>
               ))}
             </div>
-          </div>
-        )}
-
-        {/* Projects Grid */}
-        {showProjects && filteredProjects.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-            {filteredProjects.map((p, i) => (
-              <article
-                key={p.title}
-                className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
-                style={{ animationDelay: `${i * 0.05}s` }}
-              >
-                <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
-                  {p.image ? (
-                    <img
-                      src={p.image}
-                      alt={`${p.title} preview`}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-smooth duration-500"
-                    />
-                  ) : (
-                    <>
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
-                      <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
-                        {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
-                      </div>
-                    </>
-                  )}
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
-                    {p.category === "github" ? "GitHub" : p.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-smooth">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.description}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {p.tech.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-muted text-primary font-semibold">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    {p.link && (
-                      <a
-                        href={p.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth"
-                      >
-                        <ExternalLink size={14} /> Live
-                      </a>
-                    )}
-                    {p.github && (
-                      <a
-                        href={p.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto"
-                      >
-                        <Github size={14} /> Code
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-
-        {/* Projects Grid */}
-        {showProjects && filteredProjects.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-            {filteredProjects.map((p, i) => (
-              <article
-                key={p.title}
-                className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
-                style={{ animationDelay: `${i * 0.05}s` }}
-              >
-                <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
-                  {p.image ? (
-                    <img
-                      src={p.image}
-                      alt={`${p.title} preview`}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-smooth duration-500"
-                    />
-                  ) : (
-                    <>
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
-                      <div className="absolute inset-0 grid place-items-center text-primary-foreground/90 font-black text-5xl">
-                        {p.title.split(" ").map((w) => w[0]).join("").slice(0, 2)}
-                      </div>
-                    </>
-                  )}
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground capitalize">
-                    {p.category === "github" ? "GitHub" : p.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-smooth">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.description}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {p.tech.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-muted text-primary font-semibold">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    {p.link && (
-                      <a
-                        href={p.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-smooth"
-                      >
-                        <ExternalLink size={14} /> Live
-                      </a>
-                    )}
-                    {p.github && (
-                      <a
-                        href={p.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground/70 hover:text-foreground hover:gap-2.5 transition-smooth ml-auto"
-                      >
-                        <Github size={14} /> Code
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
           </div>
         )}
 
