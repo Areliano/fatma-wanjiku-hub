@@ -8,6 +8,7 @@ import weatherAppImg from "@/assets/projects/weather-app.png";
 import eventManagementImg from "@/assets/projects/event-management.png";
 import safetalkKenyaImg from "@/assets/projects/safetalk-kenya.png";
 import ujamaaFlowImg from "@/assets/projects/ujamaaflow.png";
+import appletonSchoolImg from "@/assets/projects/appleton-school.png";
 
 type Project = {
   title: string;
@@ -75,6 +76,16 @@ const projects: Project[] = [
     github: "https://github.com/Areliano/ujamaaflow-0f528308.git",
     gradient: "from-accent to-primary-glow",
     image: ujamaaFlowImg,
+  },
+  {
+    title: "Appleton Schools Website",
+    description:
+      "An official school website for Appleton Schools featuring campus information, academics, admissions, a gallery and blog. Includes a 'Book a Tour' form for parents, plus integrations with WhatsApp, email and Google Sheets to capture and route enquiries in real time.",
+    tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
+    category: "web",
+    link: "https://www.appletonschool.ac.ke/",
+    gradient: "from-primary-glow to-primary",
+    image: appletonSchoolImg,
   },
   {
     title: "Event Management System API",
