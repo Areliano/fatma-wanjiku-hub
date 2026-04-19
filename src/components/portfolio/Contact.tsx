@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Send, Linkedin, Github, Instagram } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -13,7 +14,7 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = schema.safeParse(form);
     if (!result.success) {
@@ -21,11 +22,19 @@ const Contact = () => {
       return;
     }
     setLoading(true);
-    setTimeout(() => {
-      toast.success("Message sent! I'll get back to you soon.");
-      setForm({ name: "", email: "", message: "" });
-      setLoading(false);
-    }, 800);
+    const { error } = await supabase.from("contact_messages").insert({
+      name: result.data.name,
+      email: result.data.email,
+      message: result.data.message,
+    });
+    setLoading(false);
+    if (error) {
+      console.error("Failed to save message:", error);
+      toast.error("Could not send your message. Please try again.");
+      return;
+    }
+    toast.success("Message sent! I'll get back to you soon.");
+    setForm({ name: "", email: "", message: "" });
   };
 
   return (
