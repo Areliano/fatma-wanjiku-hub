@@ -23,7 +23,7 @@ const Hero = () => {
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] mb-6">
-            Hi, I'm <span className="gradient-text">Fatma Wanjiku Hussein</span>
+            Hi, I'm <span className="text-primary">Fatma Wanjiku Hussein</span>
           </h1>
 
           <p className="text-base md:text-lg lg:text-xl text-foreground/90 mb-3 font-bold">
