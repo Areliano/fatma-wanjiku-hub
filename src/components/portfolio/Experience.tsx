@@ -59,7 +59,7 @@ const Experience = () => {
             <Briefcase size={16} /> Experience
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            My <span className="gradient-text">professional journey</span>
+            My <span className="text-primary">professional journey</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Roles across IT support, backend engineering, and digital marketing.
@@ -68,7 +68,7 @@ const Experience = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-transparent md:-translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary md:-translate-x-1/2" />
 
           <div className="space-y-12">
             {experiences.map((exp, i) => {
@@ -81,7 +81,7 @@ const Experience = () => {
                   }`}
                 >
                   {/* Dot */}
-                  <div className="absolute left-4 md:left-1/2 top-6 w-4 h-4 rounded-full bg-gradient-primary ring-4 ring-background md:-translate-x-1/2 z-10 shadow-glow" />
+                  <div className="absolute left-4 md:left-1/2 top-6 w-4 h-4 rounded-full bg-primary ring-4 ring-background md:-translate-x-1/2 z-10 shadow-elegant" />
 
                   {/* Spacer */}
                   <div className="hidden md:block md:w-1/2" />

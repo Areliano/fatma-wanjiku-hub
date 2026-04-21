@@ -20,7 +20,7 @@ const Services = () => {
             <Wrench size={16} /> Services
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            What <span className="gradient-text">I do</span>
+            What <span className="text-primary">I do</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Eight focused services across development, design, marketing, and security.
@@ -34,7 +34,7 @@ const Services = () => {
               className="group p-6 rounded-3xl bg-card border border-border/50 shadow-soft hover:shadow-elegant hover:-translate-y-2 transition-bounce animate-fade-in-up"
               style={{ animationDelay: `${i * 0.05}s` }}
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-primary text-primary-foreground grid place-items-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-bounce shadow-glow">
+              <div className="w-14 h-14 rounded-2xl bg-primary text-primary-foreground grid place-items-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-bounce shadow-elegant">
                 <s.icon size={26} />
               </div>
               <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-smooth">{s.title}</h3>

@@ -27,7 +27,7 @@ const About = () => {
             <Sparkles size={16} /> About Me
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Connecting <span className="gradient-text">technology, users & business</span>
+            Connecting <span className="text-primary">technology, users & business</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A multidisciplinary professional building solutions that are functional, secure, and meaningful.
@@ -50,13 +50,13 @@ const About = () => {
                   key={s.label}
                   className="p-6 rounded-2xl bg-card shadow-soft hover:shadow-elegant transition-smooth text-center"
                 >
-                  <p className="text-3xl md:text-4xl font-black gradient-text">{s.value}</p>
+                  <p className="text-3xl md:text-4xl font-black text-primary">{s.value}</p>
                   <p className="text-sm font-semibold text-muted-foreground mt-1">{s.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-primary text-primary-foreground shadow-elegant">
+            <div className="p-6 rounded-2xl bg-primary text-primary-foreground shadow-elegant">
               <p className="text-sm font-semibold opacity-80 mb-2">Core Stack</p>
               <div className="flex flex-wrap gap-2">
                 {["React", "Tailwind", "Python", "FastAPI", "Flask", "Django REST", "PostgreSQL"].map((t) => (

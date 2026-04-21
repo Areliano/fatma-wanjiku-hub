@@ -67,7 +67,7 @@ const CV = () => {
             <FileText size={16} /> Curriculum Vitae
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            View or download my <span className="gradient-text">CV</span>
+            View or download my <span className="text-primary">CV</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             A detailed summary of my education, experience, technical stack and certifications.
@@ -77,7 +77,7 @@ const CV = () => {
               href="/Fatma_Hussein_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant hover:scale-105 transition-bounce"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold shadow-elegant hover:scale-105 transition-bounce"
             >
               <Eye size={18} /> View CV
             </a>
@@ -94,7 +94,7 @@ const CV = () => {
         {/* CV Card */}
         <div className="rounded-[2rem] bg-card shadow-elegant border border-border/50 overflow-hidden">
           {/* Top banner */}
-          <div className="bg-gradient-primary text-primary-foreground p-8 md:p-12">
+          <div className="bg-primary text-primary-foreground p-8 md:p-12">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
               <div>
                 <h3 className="text-3xl md:text-4xl font-black mb-1">Fatma Wanjiku Hussein</h3>
@@ -128,7 +128,7 @@ const CV = () => {
               <div className="space-y-6">
                 {experience.map((e) => (
                   <div key={e.role} className="relative pl-6 border-l-2 border-border">
-                    <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gradient-primary" />
+                    <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-primary" />
                     <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-1">
                       <p className="font-bold text-foreground">{e.role}</p>
                       <span className="text-xs font-semibold text-muted-foreground">{e.period}</span>

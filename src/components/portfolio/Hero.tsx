@@ -10,10 +10,10 @@ const highlights = [
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 bg-gradient-hero overflow-hidden">
-      {/* Decorative blobs */}
+    <section id="home" className="relative min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 bg-gradient-soft overflow-hidden">
+      {/* Decorative blobs - solid color */}
       <div className="absolute top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-accent/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: "3s" }} />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: "3s" }} />
 
       <div className="container-narrow relative grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
         <div className="animate-fade-in-up">

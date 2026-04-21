@@ -168,7 +168,7 @@ const Projects = () => {
             <FolderOpen size={16} /> Projects
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Selected <span className="gradient-text">work</span>
+            Selected <span className="text-primary">work</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Web apps, brand identities, and open-source tooling. Click any design to view full-size.
@@ -183,7 +183,7 @@ const Projects = () => {
               onClick={() => setActive(t.id)}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-smooth ${
                 active === t.id
-                  ? "bg-gradient-primary text-primary-foreground shadow-elegant"
+                  ? "bg-primary text-primary-foreground shadow-elegant"
                   : "bg-card text-foreground/70 hover:text-primary border border-border"
               }`}
             >
@@ -201,11 +201,11 @@ const Projects = () => {
               const heading =
                 cat === "web" ? (
                   <>
-                    Web <span className="gradient-text">development</span>
+                    Web <span className="text-primary">development</span>
                   </>
                 ) : (
                   <>
-                    GitHub <span className="gradient-text">projects</span>
+                    GitHub <span className="text-primary">projects</span>
                   </>
                 );
               return (
@@ -220,7 +220,7 @@ const Projects = () => {
                         className="group rounded-3xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-smooth border border-border/50 animate-fade-in"
                         style={{ animationDelay: `${i * 0.05}s` }}
                       >
-                        <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden`}>
+                        <div className="relative aspect-[16/10] bg-primary overflow-hidden">
                           {p.image ? (
                             <img
                               src={p.image}
@@ -287,7 +287,7 @@ const Projects = () => {
           <div className="mb-20">
             {active === "all" && (
               <h3 className="text-2xl font-black mb-6">
-                Graphic <span className="gradient-text">design</span>
+                Graphic <span className="text-primary">design</span>
               </h3>
             )}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
@@ -305,7 +305,7 @@ const Projects = () => {
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/30 to-transparent opacity-60 group-hover:opacity-90 transition-smooth" />
+                  <div className="absolute inset-0 bg-secondary/80 opacity-60 group-hover:opacity-90 transition-smooth" />
                   <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-card/95 backdrop-blur-sm text-primary">
                     {g.category}
                   </span>
@@ -324,7 +324,7 @@ const Projects = () => {
 
         {/* Case Study */}
         <div className="rounded-[2rem] bg-card shadow-elegant border border-border/50 overflow-hidden">
-          <div className="bg-gradient-primary text-primary-foreground p-8 md:p-12">
+          <div className="bg-primary text-primary-foreground p-8 md:p-12">
             <span className="inline-block text-xs font-bold px-3 py-1 rounded-full bg-primary-foreground/20 mb-3">
               Case Study · Social Media
             </span>
@@ -356,7 +356,7 @@ const Projects = () => {
                 {caseStudy.results.map((r) => (
                   <div key={r.label} className="p-4 rounded-2xl bg-muted text-center">
                     <r.icon className="mx-auto mb-1 text-primary" size={20} />
-                    <p className="text-xl font-black gradient-text">{r.value}</p>
+                    <p className="text-xl font-black text-primary">{r.value}</p>
                     <p className="text-[11px] font-semibold text-muted-foreground mt-1 leading-tight">{r.label}</p>
                   </div>
                 ))}
