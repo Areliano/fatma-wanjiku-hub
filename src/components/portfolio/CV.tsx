@@ -2,7 +2,7 @@ import { FileText, Download, Eye, Briefcase, GraduationCap, Wrench, Award, Langu
 
 const experience = [
   {
-    role: "Social Media & Marketing Intern",
+    role: "Social Media & Marketing Specialist",
     company: "Appleton Schools, Nairobi",
     period: "November 2025 – Present",
     bullets: [
@@ -99,7 +99,7 @@ const CV = () => {
               <div>
                 <h3 className="text-3xl md:text-4xl font-black mb-1">Fatma Wanjiku Hussein</h3>
                 <p className="opacity-90 font-medium">
-                 IT Graduate · Backend Developer · Social Media & Marketing Intern
+                 IT Graduate · Backend Developer · Social Media & Marketing Specialist
                 </p>
               </div>
               <div className="flex flex-col gap-1.5 text-sm opacity-95">

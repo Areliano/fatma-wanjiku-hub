@@ -9,7 +9,7 @@ type Item = {
 
 const experiences: Item[] = [
   {
-    role: "Social Media & Marketing Intern",
+    role: "Social Media & Marketing Specialist",
     org: "Appleton Schools, Nairobi",
     duration: "November 2025 – Present",
     achievements: [
