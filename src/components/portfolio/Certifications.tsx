@@ -30,7 +30,7 @@ const Certifications = () => {
             <Award size={16} /> Certifications
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Continuous <span className="gradient-text">learning</span>
+            Continuous <span className="text-primary">learning</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Verified credentials across development, cybersecurity, and networking.
@@ -56,7 +56,7 @@ const Certifications = () => {
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth grid place-items-center">
+                <div className="absolute inset-0 bg-secondary/70 opacity-0 group-hover:opacity-100 transition-smooth grid place-items-center">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-card/95 text-primary text-xs font-semibold shadow-elegant">
                     <Eye size={14} /> View full size
                   </span>
@@ -64,7 +64,7 @@ const Certifications = () => {
               </a>
               <div className="p-5 flex-1 flex flex-col">
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <span className="w-10 h-10 shrink-0 rounded-xl bg-gradient-primary text-primary-foreground grid place-items-center shadow-glow">
+                  <span className="w-10 h-10 shrink-0 rounded-xl bg-primary text-primary-foreground grid place-items-center shadow-elegant">
                     <Award size={18} />
                   </span>
                   <span className="text-xs font-bold px-3 py-1 rounded-full bg-muted text-primary">{c.year}</span>
@@ -83,7 +83,7 @@ const Certifications = () => {
                   <a
                     href={c.image}
                     download
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-full bg-gradient-primary text-primary-foreground text-xs font-semibold hover:scale-105 transition-bounce"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:scale-105 transition-bounce"
                   >
                     <Download size={12} /> Download
                   </a>

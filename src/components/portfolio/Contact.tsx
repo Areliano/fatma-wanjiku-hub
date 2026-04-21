@@ -45,7 +45,7 @@ const Contact = () => {
             <Send size={16} /> Get in touch
           </span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Let's <span className="gradient-text">work together</span>
+            Let's <span className="text-primary">work together</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Open to roles, freelance projects, and collaborations both locally and internationally.
@@ -54,8 +54,8 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8">
           {/* Info card */}
-          <div className="rounded-3xl bg-gradient-primary text-primary-foreground p-8 md:p-10 shadow-elegant relative overflow-hidden">
-            <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+          <div className="rounded-3xl bg-primary text-primary-foreground p-8 md:p-10 shadow-elegant relative overflow-hidden">
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
             <div className="relative">
               <h3 className="text-2xl font-black mb-2">Contact Information</h3>
               <p className="opacity-80 mb-8 text-sm">Reach me through any of the channels below.</p>
@@ -154,7 +154,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant hover:scale-[1.02] transition-bounce disabled:opacity-60"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold shadow-elegant hover:scale-[1.02] transition-bounce disabled:opacity-60"
               >
                 <Send size={18} />
                 {loading ? "Sending…" : "Send Message"}
