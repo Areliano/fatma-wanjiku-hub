@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <nav className="container-narrow flex items-center justify-between px-6">
         <a href="#home" className="flex items-center gap-2 font-extrabold text-lg">
-          <span className="w-9 h-9 rounded-xl bg-gradient-primary text-primary-foreground grid place-items-center shadow-glow">
+          <span className="w-9 h-9 rounded-xl bg-primary text-primary-foreground grid place-items-center shadow-elegant">
             F
           </span>
           <span className="hidden sm:inline">Fatma<span className="text-primary">.</span></span>
@@ -54,7 +54,7 @@ const Navbar = () => {
 
         <a
           href="#contact"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-primary text-primary-foreground text-sm font-semibold shadow-elegant hover:scale-105 transition-bounce"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-elegant hover:scale-105 transition-bounce"
         >
           Hire Me
         </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 text-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground font-semibold"
+              className="mt-2 text-center px-5 py-3 rounded-full bg-primary text-primary-foreground font-semibold"
             >
               Hire Me
             </a>
