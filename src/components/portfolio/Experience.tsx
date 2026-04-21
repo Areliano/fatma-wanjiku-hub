@@ -9,9 +9,9 @@ type Item = {
 
 const experiences: Item[] = [
   {
-    role: "Social Media & Marketing Specialist",
+    role: "Social Media & Marketing Intern",
     org: "Appleton Schools, Nairobi",
-    duration: "May 2025 – Present",
+    duration: "November 2025 – Present",
     achievements: [
       "Create and publish content across Instagram, Facebook, TikTok, Google Business, X, LinkedIn and YouTube.",
       "Design, develop and maintain the school's new website; write and publish blog articles.",
@@ -25,7 +25,7 @@ const experiences: Item[] = [
   {
     role: "Back End Developer Intern",
     org: "Isentry Technologies (Remote)",
-    duration: "January 2025 – March 2025",
+    duration: "September 2025 – November 2025",
     achievements: [
       "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
       "Built and maintained RESTful APIs using FastAPI and SQLAlchemy.",

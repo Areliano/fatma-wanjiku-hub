@@ -2,9 +2,9 @@ import { FileText, Download, Eye, Briefcase, GraduationCap, Wrench, Award, Langu
 
 const experience = [
   {
-    role: "Social Media & Marketing Specialist",
+    role: "Social Media & Marketing Intern",
     company: "Appleton Schools, Nairobi",
-    period: "May 2025 – Present",
+    period: "November 2025 – Present",
     bullets: [
       "Create and publish content across Instagram, Facebook, TikTok, Google Business, X, LinkedIn and YouTube.",
       "Designed, developed and maintain the school's new website, including blog articles and ongoing content updates.",
@@ -16,7 +16,7 @@ const experience = [
   {
     role: "Back End Developer Intern",
     company: "Isentry Technologies (Remote)",
-    period: "Jan 2025 – Mar 2025",
+    period: "September 2025 – November 2025",
     bullets: [
       "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
       "Built and maintained RESTful APIs using FastAPI and SQLAlchemy.",
@@ -99,7 +99,7 @@ const CV = () => {
               <div>
                 <h3 className="text-3xl md:text-4xl font-black mb-1">Fatma Wanjiku Hussein</h3>
                 <p className="opacity-90 font-medium">
-                  IT Graduate · Backend Developer · Social Media & Marketing Specialist
+                 IT Graduate · Backend Developer · Social Media & Marketing Intern
                 </p>
               </div>
               <div className="flex flex-col gap-1.5 text-sm opacity-95">
@@ -155,7 +155,7 @@ const CV = () => {
               <div className="rounded-2xl bg-muted p-5">
                 <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-1">
                   <p className="font-bold">Bachelor of Business Information Technology (BBIT)</p>
-                  <span className="text-xs font-semibold text-muted-foreground">Aug 2021 – Apr 2025</span>
+                  <span className="text-xs font-semibold text-muted-foreground">Aug 2021 – May 2025</span>
                 </div>
                 <p className="text-sm text-primary font-semibold">Multimedia University of Kenya</p>
                 <p className="text-sm text-foreground/70 mt-1">Second Class Honors (Upper Division)</p>
