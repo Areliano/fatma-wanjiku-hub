@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3, Maximize2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Lightbox from "./Lightbox";
 import { graphics } from "@/data/graphics";
 import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
