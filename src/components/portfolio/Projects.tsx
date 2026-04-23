@@ -370,6 +370,12 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
+              <Link
+                to="/case-study/appleton"
+                className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-elegant hover:scale-105 transition-bounce"
+              >
+                Read full case study →
+              </Link>
             </div>
           </div>
         </div>
