@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ExternalLink, Github, FolderOpen, TrendingUp, Users, BarChart3, Maximize2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Lightbox from "./Lightbox";
 import { graphics } from "@/data/graphics";
 import clipsAndStylesImg from "@/assets/projects/clips-and-styles.png";
@@ -130,17 +131,17 @@ const tabs = [
 
 const caseStudy = {
   title: "Appleton Schools | Social Media Growth",
-  platforms: ["Facebook", "Instagram", "TikTok"],
-  role: "Lead Social Media Manager & Content Strategist",
+  platforms: ["Facebook", "Instagram", "LinkedIn"],
+  role: "Social Media & Marketing Intern",
   strategy: [
-    "Defined brand voice and built a consistent visual content system.",
-    "Implemented a weekly content calendar with reels, posts and stories.",
-    "Engaged community through interactive polls, Q&As, and parent stories.",
+    "Built a daily posting cadence anchored in student-led storytelling.",
+    "Mixed reels, carousels, single posts and posters for maximum reach.",
+    "Created three content pillars: students, school culture, and academics + co-curriculars.",
   ],
   results: [
-    { icon: TrendingUp, label: "Engagement", value: "+180%" },
-    { icon: Users, label: "Audience growth", value: "+5K" },
-    { icon: BarChart3, label: "Reach (monthly)", value: "200K+" },
+    { icon: TrendingUp, label: "Engagement", value: "+100%" },
+    { icon: Users, label: "Followers", value: "4K → 4.9K" },
+    { icon: BarChart3, label: "Direct inquiries", value: "10+" },
   ],
 };
 
@@ -261,6 +262,14 @@ const Projects = () => {
                                 <ExternalLink size={14} /> Live
                               </a>
                             )}
+                            {p.title === "Appleton Schools Website" && (
+                              <Link
+                                to="/case-study/appleton"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:gap-2.5 transition-smooth"
+                              >
+                                Read Case Study →
+                              </Link>
+                            )}
                             {p.github && (
                               <a
                                 href={p.github}
@@ -361,6 +370,12 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
+              <Link
+                to="/case-study/appleton"
+                className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-elegant hover:scale-105 transition-bounce"
+              >
+                Read full case study →
+              </Link>
             </div>
           </div>
         </div>
