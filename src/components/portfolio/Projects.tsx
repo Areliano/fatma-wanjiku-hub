@@ -322,6 +322,7 @@ const Projects = () => {
             </div>
           </div>
         )}
+      </div>
 
       {lightboxIndex !== null && (
         <Lightbox
