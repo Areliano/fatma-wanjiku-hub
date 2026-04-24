@@ -262,14 +262,6 @@ const Projects = () => {
                                 <ExternalLink size={14} /> Live
                               </a>
                             )}
-                            {p.title === "Appleton Schools Website" && (
-                              <Link
-                                to="/case-study/appleton"
-                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:gap-2.5 transition-smooth"
-                              >
-                                Read Case Study →
-                              </Link>
-                            )}
                             {p.github && (
                               <a
                                 href={p.github}
