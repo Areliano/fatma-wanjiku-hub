@@ -323,56 +323,6 @@ const Projects = () => {
           </div>
         )}
 
-        {/* Case Study */}
-        <div className="rounded-[2rem] bg-card shadow-elegant border border-border/50 overflow-hidden">
-          <div className="bg-primary text-primary-foreground p-8 md:p-12">
-            <span className="inline-block text-xs font-bold px-3 py-1 rounded-full bg-primary-foreground/20 mb-3">
-              Case Study · Social Media
-            </span>
-            <h3 className="text-2xl md:text-3xl font-black mb-2">{caseStudy.title}</h3>
-            <p className="opacity-90">Role: {caseStudy.role}</p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {caseStudy.platforms.map((p) => (
-                <span key={p} className="text-xs px-3 py-1.5 rounded-full bg-primary-foreground/15 font-semibold">
-                  {p}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="p-8 md:p-12 grid md:grid-cols-2 gap-10">
-            <div>
-              <h4 className="font-bold text-lg mb-3 text-foreground">Strategy</h4>
-              <ul className="space-y-2.5">
-                {caseStudy.strategy.map((s, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-foreground/75 leading-relaxed">
-                    <span className="text-accent mt-1.5 flex-shrink-0">▸</span>
-                    <span>{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-3 text-foreground">Results</h4>
-              <div className="grid grid-cols-3 gap-3">
-                {caseStudy.results.map((r) => (
-                  <div key={r.label} className="p-4 rounded-2xl bg-muted text-center">
-                    <r.icon className="mx-auto mb-1 text-primary" size={20} />
-                    <p className="text-xl font-black text-primary">{r.value}</p>
-                    <p className="text-[11px] font-semibold text-muted-foreground mt-1 leading-tight">{r.label}</p>
-                  </div>
-                ))}
-              </div>
-              <Link
-                to="/case-study/appleton"
-                className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-elegant hover:scale-105 transition-bounce"
-              >
-                Read full case study →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {lightboxIndex !== null && (
         <Lightbox
           images={lightboxImages}
