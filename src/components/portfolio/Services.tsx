@@ -1,4 +1,4 @@
-import { Code, Server, Layout, Palette, Megaphone, TrendingUp, ShieldCheck, Headphones, Wrench } from "lucide-react";
+import { Code, Server, Layout, Palette, Megaphone, TrendingUp, ShieldCheck, Headphones, Wrench, Briefcase } from "lucide-react";
 
 const services = [
   { icon: Layout, title: "Frontend Web Development", desc: "Pixel-perfect, responsive interfaces with React and Tailwind CSS." },
@@ -9,6 +9,7 @@ const services = [
   { icon: TrendingUp, title: "Social Media Marketing", desc: "Paid and organic campaigns optimized for reach, leads, and conversions." },
   { icon: ShieldCheck, title: "Cybersecurity Audits", desc: "Vulnerability assessments and security fundamentals for safer products." },
   { icon: Headphones, title: "IT Support", desc: "Hands-on technical support, troubleshooting, and systems maintenance." },
+  { icon: Briefcase, title: "Virtual Assistance", desc: "Remote administrative support: scheduling, email management, research, and day-to-day task coordination." },
 ];
 
 const Services = () => {
@@ -23,7 +24,7 @@ const Services = () => {
             What <span className="text-primary">I do</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Eight focused services across development, design, marketing, and security.
+            Nine focused services across development, design, marketing, security, and virtual assistance.
           </p>
         </div>
 
