@@ -2,15 +2,14 @@ import { FileText, Download, Eye, Briefcase, GraduationCap, Wrench, Award, Langu
 
 const experience = [
   {
-    role: "Social Media & Marketing Specialist",
-    company: "Appleton Schools, Nairobi",
-    period: "November 2025 – Present",
+    role: "IT Support & Communications Strategist",
+    company: "Appleton Schools, Nairobi (Hybrid)",
+    period: "December 2025 – Present",
     bullets: [
-      "Create and publish content across Instagram, Facebook, TikTok, Google Business, X, LinkedIn and YouTube.",
-      "Designed, developed and maintain the school's new website, including blog articles and ongoing content updates.",
-      "Edit visual content (images & videos) using Canva, CapCut and Adobe Photoshop.",
-      "Generate monthly reports on organic content performance and audience growth.",
-      "Plan and execute marketing events, open days and school activations; support paid ad campaigns and weekly strategy meetings.",
+      "Designed and developed the school website from scratch, delivering a fully functional, responsive site aligned with brand and operational requirements.",
+      "Provide first-line ICT support resolving hardware, software, and network connectivity issues across departments.",
+      "Create graphic design assets including posters, banners, and digital marketing materials using Canva.",
+      "Manage social media platforms, developing content strategies that drive engagement and brand awareness.",
     ],
   },
   {
@@ -19,22 +18,20 @@ const experience = [
     period: "September 2025 – November 2025",
     bullets: [
       "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
-      "Built and maintained RESTful APIs using FastAPI and SQLAlchemy.",
-      "Implemented user authentication and role-based access control.",
-      "Designed and optimized relational database models for users, projects, tasks and skills.",
-      "Supported integrations with external tools such as GitHub and Trello.",
+      "Built and maintained RESTful APIs using FastAPI, SQLAlchemy, and PostgreSQL.",
+      "Implemented user authentication and role-based access control (RBAC) and designed database schemas.",
+      "Participated in testing, debugging, and deployment within a fully remote Agile team.",
     ],
   },
   {
-    role: "ICT Attachée",
+    role: "ICT Support Intern",
     company: "Postal Corporation of Kenya (PCK), Nairobi",
-    period: "May 2024 – Jul 2024",
+    period: "May 2024 – July 2024",
     bullets: [
-      "Provided frontline IT support, resolving hardware, software and connectivity issues to minimize downtime.",
-      "Installed, configured and maintained computers, printers and other ICT equipment.",
-      "Managed IT asset inventory and digital records, ensuring accurate documentation.",
-      "Performed routine system maintenance and supported telephony infrastructure.",
-      "Assisted staff in adopting digital tools, improving efficiency in document handling and communication.",
+      "Provided frontline ICT support for hardware, software, and network-related issues.",
+      "Installed, configured, and maintained computers, printers, and ICT equipment across departments.",
+      "Managed ICT asset inventory and maintained accurate technical documentation.",
+      "Assisted with network connectivity and supported staff adoption of digital tools.",
     ],
   },
 ];
