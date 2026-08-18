@@ -14,7 +14,7 @@ import openDayKilimani3 from "@/assets/graphics/appleton-open-day-kilimani-3.png
 import openDayStory from "@/assets/graphics/appleton-open-day-story.png";
 import openDaySquare from "@/assets/graphics/appleton-open-day-square.png";
 import openDayInvite from "@/assets/graphics/appleton-open-day-invite.jpg";
-import september2026 from "@/assets/graphics/appleton-september-2026-enrolment.png.asset.json";
+import september2026Asset from "@/assets/graphics/appleton-september-2026-enrolment.png.asset.json";
 import ahadiWelcome from "@/assets/graphics/ahadi-welcome-back.png";
 import cityArtFair from "@/assets/graphics/city-art-fair.jpg";
 import foodFestival from "@/assets/graphics/local-food-festival.jpg";
@@ -37,7 +37,7 @@ export const graphics: GraphicItem[] = [
   { image: openDayKilimani3, title: "Open Day Countdown: Cultural", client: "Appleton Schools", category: "Event Promo" },
   { image: openDayInvite, title: "Open Day 2025 Invite", client: "Appleton Schools", category: "Invitation" },
   { image: admissions, title: "2026 Admissions Campaign", client: "Appleton Schools", category: "Marketing" },
-  { image: september2026, title: "September 2026 Enrolment", client: "Appleton Schools", category: "Marketing" },
+  { image: september2026Asset.url, title: "September 2026 Enrolment", client: "Appleton Schools", category: "Marketing" },
   { image: empoweringMinds, title: "Empowering Minds", client: "Appleton Schools", category: "Brand Poster" },
   { image: unlockingPotential, title: "Unlocking Every Child's Potential", client: "Appleton Schools", category: "Brand Poster" },
   { image: consistency, title: "Consistency Builds Confident Children", client: "Appleton Schools", category: "Educational" },
