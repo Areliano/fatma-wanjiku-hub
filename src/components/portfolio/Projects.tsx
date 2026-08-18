@@ -26,6 +26,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Appleton Schools Website",
+    description:
+      "An official school website for Appleton Schools featuring campus information, academics, admissions, a gallery and blog. Includes a 'Book a Tour' form for parents, plus integrations with WhatsApp, email and Google Sheets to capture and route enquiries in real time.",
+    tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
+    category: "web",
+    link: "https://www.appletonschool.ac.ke/",
+    gradient: "from-primary-glow to-primary",
+    image: appletonSchoolImg,
+  },
+  {
     title: "Clips & Styles",
     description:
       "A beauty-tech platform where clients can discover and book services from their favourite beauty professionals. Business owners can join the waitlist to be notified the moment the app launches.",
@@ -79,16 +89,6 @@ const projects: Project[] = [
     github: "https://github.com/Areliano/ujamaaflow-0f528308.git",
     gradient: "from-accent to-primary-glow",
     image: ujamaaFlowImg,
-  },
-  {
-    title: "Appleton Schools Website",
-    description:
-      "An official school website for Appleton Schools featuring campus information, academics, admissions, a gallery and blog. Includes a 'Book a Tour' form for parents, plus integrations with WhatsApp, email and Google Sheets to capture and route enquiries in real time.",
-    tech: ["Vite", "React", "TypeScript", "shadcn-ui", "Tailwind CSS"],
-    category: "web",
-    link: "https://www.appletonschool.ac.ke/",
-    gradient: "from-primary-glow to-primary",
-    image: appletonSchoolImg,
   },
   {
     title: "Usanii Mashariki Art Gallery",

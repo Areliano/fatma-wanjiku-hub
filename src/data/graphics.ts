@@ -29,6 +29,7 @@ export type GraphicItem = {
 
 export const graphics: GraphicItem[] = [
   // Appleton Schools
+  { image: september2026Asset.url, title: "September 2026 Enrolment", client: "Appleton Schools", category: "Marketing" },
   { image: openDay, title: "Open Day Countdown", client: "Appleton Schools", category: "Event Promo" },
   { image: openDaySquare, title: "Join Our Open Day", client: "Appleton Schools", category: "Event Promo" },
   { image: openDayStory, title: "Explore Our Learning Spaces (Story)", client: "Appleton Schools", category: "Social Story" },
@@ -37,7 +38,6 @@ export const graphics: GraphicItem[] = [
   { image: openDayKilimani3, title: "Open Day Countdown: Cultural", client: "Appleton Schools", category: "Event Promo" },
   { image: openDayInvite, title: "Open Day 2025 Invite", client: "Appleton Schools", category: "Invitation" },
   { image: admissions, title: "2026 Admissions Campaign", client: "Appleton Schools", category: "Marketing" },
-  { image: september2026Asset.url, title: "September 2026 Enrolment", client: "Appleton Schools", category: "Marketing" },
   { image: empoweringMinds, title: "Empowering Minds", client: "Appleton Schools", category: "Brand Poster" },
   { image: unlockingPotential, title: "Unlocking Every Child's Potential", client: "Appleton Schools", category: "Brand Poster" },
   { image: consistency, title: "Consistency Builds Confident Children", client: "Appleton Schools", category: "Educational" },
