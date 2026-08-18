@@ -9,8 +9,8 @@ const managedPages = [
     website: "https://www.appletonschool.ac.ke/",
     socials: [
       { platform: "Facebook", icon: Facebook, url: "https://www.facebook.com/appletonschools" },
-      { platform: "Instagram", icon: Instagram, url: "https://www.instagram.com/appletonschools" },
-      { platform: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/school/appleton-schools" },
+      { platform: "Instagram", icon: Instagram, url: "https://www.instagram.com/appletonschools/" },
+      { platform: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/appleton-schools/" },
     ],
   },
 ];
