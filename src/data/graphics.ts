@@ -15,6 +15,7 @@ import openDayStory from "@/assets/graphics/appleton-open-day-story.png";
 import openDaySquare from "@/assets/graphics/appleton-open-day-square.png";
 import openDayInvite from "@/assets/graphics/appleton-open-day-invite.jpg";
 import september2026Asset from "@/assets/graphics/appleton-september-2026-enrolment.png.asset.json";
+import parentsWebinarAsset from "@/assets/graphics/appleton-parents-webinar.png.asset.json";
 import ahadiWelcome from "@/assets/graphics/ahadi-welcome-back.png";
 import cityArtFair from "@/assets/graphics/city-art-fair.jpg";
 import foodFestival from "@/assets/graphics/local-food-festival.jpg";
@@ -29,6 +30,7 @@ export type GraphicItem = {
 
 export const graphics: GraphicItem[] = [
   // Appleton Schools
+  { image: parentsWebinarAsset.url, title: "Parents' Webinar: Oral Hygiene", client: "Appleton Schools", category: "Event Promo" },
   { image: september2026Asset.url, title: "September 2026 Enrolment", client: "Appleton Schools", category: "Marketing" },
   { image: openDay, title: "Open Day Countdown", client: "Appleton Schools", category: "Event Promo" },
   { image: openDaySquare, title: "Join Our Open Day", client: "Appleton Schools", category: "Event Promo" },

@@ -9,14 +9,18 @@ type Item = {
 
 const experiences: Item[] = [
   {
-    role: "IT Support & Communications Strategist",
-    org: "Appleton Schools, Nairobi (Hybrid)",
+    role: "Communications Strategist",
+    org: "Appleton Schools, Nairobi",
     duration: "December 2025 – Present",
     achievements: [
-      "Designed and developed the school website from scratch, delivering a fully functional, responsive site aligned with brand and operational requirements.",
-      "Provide first-line ICT support resolving hardware, software, and network connectivity issues across departments.",
-      "Create graphic design assets including posters, banners, and digital marketing materials using Canva.",
-      "Manage social media platforms, developing content strategies that drive engagement and brand awareness.",
+      "Develop, write and manage digital communications across social media platforms, supporting institutional visibility and stakeholder engagement.",
+      "Prepare newsletters, reports, promotional materials, website content and other internal and external communications.",
+      "Manage and update the school's website, ensuring content accuracy, accessibility and functionality.",
+      "Monitor digital communication performance, analyse engagement metrics and prepare reports to inform communication strategies.",
+      "Maintain content calendars and coordinate communication activities across departments to support organisational priorities.",
+      "Support the planning and communication of institutional events, admissions campaigns and community engagement initiatives.",
+      "Produce and edit photography and video content for institutional communications and digital platforms.",
+      "Manage email marketing campaigns using Mailchimp and provide technical assistance to support digital operations.",
     ],
   },
   {
@@ -24,21 +28,23 @@ const experiences: Item[] = [
     org: "Isentry Technologies (Remote)",
     duration: "September 2025 – November 2025",
     achievements: [
-      "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
-      "Built and maintained RESTful APIs using FastAPI, SQLAlchemy, and PostgreSQL.",
-      "Implemented user authentication and role-based access control (RBAC) and designed database schemas.",
-      "Participated in testing, debugging, and deployment within a fully remote Agile team.",
+      "Developed and maintained RESTful APIs using Python, FastAPI and SQLAlchemy for TeamIQ, an intern performance and growth tracking platform.",
+      "Implemented authentication systems and role-based access controls to support secure application functionality.",
+      "Assisted in database design, testing, debugging and deployment activities.",
+      "Prepared technical documentation and contributed to collaborative development processes within a remote team.",
+      "Worked collaboratively with team members to troubleshoot issues and support project delivery.",
     ],
   },
   {
     role: "ICT Support Intern",
-    org: "Postal Corporation of Kenya (PCK), Nairobi",
+    org: "Postal Corporation of Kenya, Nairobi",
     duration: "May 2024 – July 2024",
     achievements: [
-      "Provided frontline ICT support for hardware, software, and network-related issues.",
-      "Installed, configured, and maintained computers, printers, and ICT equipment across departments.",
-      "Managed ICT asset inventory and maintained accurate technical documentation.",
-      "Assisted with network connectivity and supported staff adoption of digital tools.",
+      "Provided frontline technical support for hardware, software and network-related issues across departments.",
+      "Assisted staff with digital tools, computer systems and communication technologies.",
+      "Maintained ICT inventories and technical documentation to support effective resource management.",
+      "Assisted with system maintenance, equipment configuration and troubleshooting.",
+      "Supported network connectivity and day-to-day technology operations.",
     ],
   },
 ];
