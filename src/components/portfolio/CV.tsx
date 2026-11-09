@@ -165,7 +165,7 @@ const CV = () => {
                   <span className="text-xs font-semibold text-muted-foreground">Aug 2021 – May 2025</span>
                 </div>
                 <p className="text-sm text-primary font-semibold">Multimedia University of Kenya</p>
-                <p className="text-sm text-foreground/70 mt-1">Second Class Honors (Upper Division)</p>
+                <p className="text-sm text-foreground/70 mt-1">Second Class Honours (Upper Division)</p>
               </div>
             </div>
 
