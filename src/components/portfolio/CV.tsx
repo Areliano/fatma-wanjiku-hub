@@ -2,14 +2,18 @@ import { FileText, Download, Eye, Briefcase, GraduationCap, Wrench, Award, Langu
 
 const experience = [
   {
-    role: "IT Support & Communications Strategist",
-    company: "Appleton Schools, Nairobi (Hybrid)",
+    role: "Communications Strategist",
+    company: "Appleton Schools, Nairobi",
     period: "December 2025 – Present",
     bullets: [
-      "Designed and developed the school website from scratch, delivering a fully functional, responsive site aligned with brand and operational requirements.",
-      "Provide first-line ICT support resolving hardware, software, and network connectivity issues across departments.",
-      "Create graphic design assets including posters, banners, and digital marketing materials using Canva.",
-      "Manage social media platforms, developing content strategies that drive engagement and brand awareness.",
+      "Develop, write and manage digital communications across social media platforms, supporting institutional visibility and stakeholder engagement.",
+      "Prepare newsletters, reports, promotional materials, website content and other internal and external communications.",
+      "Manage and update the school's website, ensuring content accuracy, accessibility and functionality.",
+      "Monitor digital communication performance, analyse engagement metrics and prepare reports to inform communication strategies.",
+      "Maintain content calendars and coordinate communication activities across departments to support organisational priorities.",
+      "Support the planning and communication of institutional events, admissions campaigns and community engagement initiatives.",
+      "Produce and edit photography and video content for institutional communications and digital platforms.",
+      "Manage email marketing campaigns using Mailchimp and provide technical assistance to support digital operations.",
     ],
   },
   {
@@ -17,41 +21,45 @@ const experience = [
     company: "Isentry Technologies (Remote)",
     period: "September 2025 – November 2025",
     bullets: [
-      "Contributed to backend development of TeamIQ, an intern performance and growth tracking platform.",
-      "Built and maintained RESTful APIs using FastAPI, SQLAlchemy, and PostgreSQL.",
-      "Implemented user authentication and role-based access control (RBAC) and designed database schemas.",
-      "Participated in testing, debugging, and deployment within a fully remote Agile team.",
+      "Developed and maintained RESTful APIs using Python, FastAPI and SQLAlchemy for TeamIQ, an intern performance and growth tracking platform.",
+      "Implemented authentication systems and role-based access controls to support secure application functionality.",
+      "Assisted in database design, testing, debugging and deployment activities.",
+      "Prepared technical documentation and contributed to collaborative development processes within a remote team.",
+      "Worked collaboratively with team members to troubleshoot issues and support project delivery.",
     ],
   },
   {
     role: "ICT Support Intern",
-    company: "Postal Corporation of Kenya (PCK), Nairobi",
+    company: "Postal Corporation of Kenya, Nairobi",
     period: "May 2024 – July 2024",
     bullets: [
-      "Provided frontline ICT support for hardware, software, and network-related issues.",
-      "Installed, configured, and maintained computers, printers, and ICT equipment across departments.",
-      "Managed ICT asset inventory and maintained accurate technical documentation.",
-      "Assisted with network connectivity and supported staff adoption of digital tools.",
+      "Provided frontline technical support for hardware, software and network-related issues across departments.",
+      "Assisted staff with digital tools, computer systems and communication technologies.",
+      "Maintained ICT inventories and technical documentation to support effective resource management.",
+      "Assisted with system maintenance, equipment configuration and troubleshooting.",
+      "Supported network connectivity and day-to-day technology operations.",
     ],
   },
 ];
 
 const skillGroups = [
-  { label: "IT Support & Networking", items: ["Hardware/software troubleshooting", "System maintenance", "Network protocols", "Basic system administration"] },
-  { label: "Cybersecurity", items: ["Vulnerability scanning", "Threat analysis", "Network security fundamentals"] },
-  { label: "Programming & Backend", items: ["Python", "FastAPI", "Flask", "Django", "SQLAlchemy"] },
-  { label: "Tools & Documentation", items: ["Microsoft Office", "Google Workspace", "WordPress", "Canva"] },
+  { label: "Research, Communications & Admin", items: ["Research & information gathering", "Report writing & documentation", "Copywriting, editing & proofreading", "Newsletters & email communications", "Digital content development", "Website administration"] },
+  { label: "Office & Productivity", items: ["Microsoft Word", "Excel", "PowerPoint", "Google Workspace", "Trello"] },
+  { label: "Communications & Design", items: ["Mailchimp", "Canva", "WordPress", "Social media management", "Content scheduling"] },
+  { label: "Software Development", items: ["Python", "FastAPI", "Flask", "Django", "SQLAlchemy", "HTML", "CSS"] },
+  { label: "Technical Support", items: ["ICT troubleshooting", "System maintenance", "Network fundamentals"] },
+  { label: "Cybersecurity", items: ["Cybersecurity fundamentals", "Vulnerability scanning", "Secure coding principles"] },
 ];
 
-const competencies = [
-  "Technical Troubleshooting & Support",
-  "Analytical Thinking & Problem Solving",
-  "Systems Documentation & Record Keeping",
-  "Teamwork & Collaboration",
-  "Clear Verbal & Written Communication",
-  "Planning, Organization & Time Management",
-  "Accountability & Proactiveness",
-  "Adaptability & Willingness to Learn",
+const certifications = [
+  "Google Cybersecurity Professional Certificate – Coursera (2025)",
+  "Python for Software Engineering – CSAA (2025)",
+  "Fundamentals: Designing & Deploying Computer Networks – Internet Society (2025)",
+  "Security Analyst Training – CyberShujaa (2024)",
+  "LITA Cybersecurity Training – LITA (2024)",
+  "Full Stack Web Development – eMobilis (2024)",
+  "Web Development – Tech4Dev (2024)",
+  "Google IT Support Professional Certificate – Coursera (2022)",
 ];
 
 const CV = () => {
@@ -96,11 +104,11 @@ const CV = () => {
               <div>
                 <h3 className="text-3xl md:text-4xl font-black mb-1">Fatma Wanjiku Hussein</h3>
                 <p className="opacity-90 font-medium">
-                 BBIT Graduate · Backend Developer · Social Media & Marketing Specialist
+                 BBIT Graduate · Communications Strategist · Backend Developer
                 </p>
               </div>
               <div className="flex flex-col gap-1.5 text-sm opacity-95">
-                <span className="inline-flex items-center gap-2"><MapPin size={14} /> Nairobi, Kenya · Open to relocation</span>
+                <span className="inline-flex items-center gap-2"><MapPin size={14} /> Nairobi, Kenya</span>
                 <span className="inline-flex items-center gap-2"><Phone size={14} /> +254 792 535 807</span>
                 <span className="inline-flex items-center gap-2"><Mail size={14} /> fatmahussein355@gmail.com</span>
               </div>
@@ -112,8 +120,10 @@ const CV = () => {
             <div>
               <h4 className="text-xs font-bold tracking-widest text-primary mb-2 uppercase">Professional Summary</h4>
               <p className="text-foreground/80 leading-relaxed">
-                Motivated Information Technology graduate with a Bachelor's degree in Business Information Technology and
-                hands-on experience in IT Support, Social Media Marketing, Web Development and cybersecurity fundamentals.
+                Creative and detail-oriented Business Information Technology (BBIT) graduate with experience in digital
+                communications, content creation, social media management, website administration, and community
+                engagement. Skilled in translating complex ideas into accessible content, managing digital platforms, and
+                collaborating across teams to deliver meaningful communication strategies.
               </p>
             </div>
 
@@ -180,13 +190,13 @@ const CV = () => {
               </div>
             </div>
 
-            {/* Core Competencies */}
+            {/* Certifications & Training */}
             <div>
               <h4 className="flex items-center gap-2 text-lg font-black mb-6">
-                <Award size={18} className="text-primary" /> Core Competencies
+                <Award size={18} className="text-primary" /> Certifications & Training
               </h4>
               <div className="grid sm:grid-cols-2 gap-2">
-                {competencies.map((c) => (
+                {certifications.map((c) => (
                   <div key={c} className="flex gap-2 items-start text-sm text-foreground/80">
                     <span className="text-accent mt-1">●</span>
                     <span>{c}</span>
